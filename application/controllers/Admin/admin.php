@@ -26,7 +26,7 @@ class admin extends CI_Controller {
                 
 
                    
-                        $data = array('title' => 'Tambah Data admin',
+                        $data = array('title' =>'Masukkan Tambah Data Admin',
                                     'error' => $this->upload->display_errors('Ukuran file terlalu besar'),
                                     'isi' => 'admin/admin/tambah');
                         $this->load->view('admin/layout/wrapper', $data, FALSE);
@@ -118,7 +118,7 @@ class admin extends CI_Controller {
     public function delete($nis){
         $data = array('nis' => $nis);
             $this->admin_model->delete($data);
-            $this->session->set_flashdata('sukses', 'Data telah dihapus');
+            $this->session->set_flashdata('sukses', "Data Ini Telah Dihapus");
             redirect(base_url('admin/admin'),'refresh');
 }
 }
